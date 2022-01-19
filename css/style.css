@@ -2,21 +2,145 @@
     /* main BG */
     --very-dark-blue: hsl(217, 54%, 11%);
     /* card BG */
-    --very-dark-blue: hsl(216, 50%, 16%);
+    --very-dark-blue2: hsl(216, 50%, 16%);
     /* line */
-    --very-dark-blue: hsl(215, 32%, 27%);
+    --very-dark-blue3: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
     --soft-blue: hsl(215, 51%, 70%);
     --cyan: hsl(178, 100%, 50%);
+    --gray: #8BACD9;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Outfit', sans-serif;
 }
 
 body {
     background-color: var(--very-dark-blue);
+    font-family: 'Outfit', sans-serif;
+    height: 100vh;
 }
+
+@media(max-width:576px) {
+    .wrapper {
+        overflow: hidden;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        width: 90vw;
+        background-color: var(--very-dark-blue2);
+        border-radius: 10px;
+        flex-wrap: wrap;
+    }
+
+    img {
+        margin-top: 8%;
+        align-self: flex-center;
+        width: 100%;
+        flex-basis: 80%;
+        border-radius: 10px;
+    }
+
+    .txt {
+        display: flex;
+        flex-direction: column;
+        color: var(--white);
+        flex-basis: 80%;
+    }
+
+    .header-text {
+        font-size: 20px;
+        margin: 10px 0 10px 0;
+    }
+
+    .description {
+        font-weight: 300;
+        color: var(--soft-blue);
+        font-size: 18px;
+    }
+
+    /* Price */
+    .prices {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 80%;
+        padding-bottom: 15px;
+        border-bottom: 0.5px solid gray;
+    }
+
+    .prices .price-ico {
+        flex-basis: 5%;
+    }
+
+    .prices .price-txt {
+        color: var(--cyan);
+        font-size: 15px;
+        flex-grow: 1;
+        padding-left: 10px;
+        padding-top: 20px;
+    }
+
+
+    .prices .time-ico {
+        flex-basis: 8%;
+    }
+
+    .prices .time-left {
+        color: var(--gray);
+        font-size: 15px;
+        padding-left: 5px;
+        padding-top: 20px;
+    }
+
+    /* Footer */
+    .footer {
+        display: flex;
+        flex-basis: 80%;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .footer .author-img {
+        flex-basis: 8%;
+        margin: 10px 0;
+        border: 1px solid var(--white);
+        border-radius: 50%;
+        flex-grow: 1;
+    }
+
+    .footer .author {
+        flex-basis: 70%;
+        flex-grow: 1;
+        margin-left: 20px;
+        font-size: 15px;
+        color: var(--white)
+    }
+
+    .author span {
+        color: var(--gray)
+    }
+
+    .attribution {
+        position: fixed;
+        bottom: 5vh;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--white);
+        font-size: 10px;
+        width: 80%;
+        text-align: center;
+    }
+}
+
+
+
+
+/* TODO: zrobić reszte mq */
