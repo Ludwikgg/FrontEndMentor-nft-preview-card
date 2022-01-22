@@ -18,6 +18,7 @@
 }
 
 body {
+    position: relative;
     background-color: var(--very-dark-blue);
     font-family: 'Outfit', sans-serif;
     height: 100vh;
@@ -32,7 +33,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 75vh;
     width: 90vw;
     margin: 0 2vh;
     background-color: var(--very-dark-blue2);
@@ -83,7 +83,7 @@ body {
 
 .description {
     font-weight: 300;
-    color: var(--soft-blue);
+    color: var(--gray);
     font-size: 3vh;
     margin-bottom: 2vh;
 }
@@ -161,10 +161,11 @@ body {
     text-align: center;
 }
 
-
-@media (min-width:376px) {
+@media(min-width:370px) {
     .wrapper {
-        height: 80vh;
+        transform: translate(calc(-50% - 3vh), -50%);
+        margin: 0 3vh;
+        width: 80vw;
     }
 }
 
