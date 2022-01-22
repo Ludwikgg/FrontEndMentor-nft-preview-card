@@ -270,5 +270,11 @@ body {
     }
 }
 
+@media(min-width:1400px) {
+    .wrapper {
+        width: 20%;
+    }
+}
+
 /* TODO: zrobić reszte mq:
 zacząć od min-width poźniej max-width*/
