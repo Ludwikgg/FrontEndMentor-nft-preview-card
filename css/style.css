@@ -6,8 +6,8 @@
     /* line */
     --very-dark-blue3: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
-    --soft-blue: hsl(215, 51%, 70%);
     --cyan: hsl(178, 100%, 50%);
+    --soft-cyan: rgba(0, 255, 247, 0.3);
     --gray: #8BACD9;
 }
 
@@ -23,124 +23,242 @@ body {
     height: 100vh;
 }
 
-@media(max-width:576px) {
+.wrapper {
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 90vw;
+    background-color: var(--very-dark-blue2);
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+
+.equi-img {
+    position: relative;
+    margin-top: 8%;
+    align-self: flex-center;
+    flex-basis: 80%;
+}
+
+.shadow-bg {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 99%;
+    background-color: rgba(0, 255, 247, 0);
+    border-radius: 10px;
+}
+
+.eye-ico {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.txt {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    flex-basis: 80%;
+}
+
+.header-text {
+    font-size: 3vh;
+    margin: 2vh 0 2vh 0;
+    cursor: pointer;
+}
+
+.description {
+    font-weight: 300;
+    color: var(--soft-blue);
+    font-size: 3vh;
+    margin-bottom: 2vh;
+}
+
+/* Price */
+.prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 80%;
+    padding-bottom: 20px;
+    border-bottom: 0.5px solid gray;
+}
+
+.prices .price-ico {
+    flex-basis: 5%;
+}
+
+.prices .price-txt {
+    color: var(--cyan);
+    font-size: 2.2vh;
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+
+.prices .time-ico {
+    flex-basis: 8%;
+}
+
+.prices .time-left {
+    color: var(--gray);
+    font-size: 2.2vh;
+    padding-left: 5px;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    flex-basis: 80%;
+    height: 10vh;
+    align-items: center;
+    justify-items: center;
+}
+
+.footer .author-img {
+    width: 15%;
+    margin: 1vh 0;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    flex-grow: 1;
+}
+
+.footer .author {
+    flex-basis: 75%;
+    flex-grow: 1;
+    margin-left: 20px;
+    font-size: 2vh;
+    color: var(--gray)
+}
+
+.author span {
+    color: var(--white);
+    cursor: pointer;
+}
+
+.attribution {
+    position: fixed;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 1.5vh;
+    width: 80%;
+    text-align: center;
+}
+
+
+@media (max-width:376px) {
     .wrapper {
-        overflow: hidden;
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 80vh;
-        width: 90vw;
-        background-color: var(--very-dark-blue2);
-        border-radius: 10px;
-        flex-wrap: wrap;
     }
+}
 
-    img {
-        margin-top: 8%;
-        align-self: flex-center;
-        width: 100%;
-        flex-basis: 80%;
-        border-radius: 10px;
-    }
-
-    .txt {
-        display: flex;
-        flex-direction: column;
-        color: var(--white);
-        flex-basis: 80%;
+@media(min-width:576px) {
+    .wrapper {
+        height: 70vh;
+        width: 50vw;
     }
 
     .header-text {
-        font-size: 20px;
-        margin: 10px 0 10px 0;
+        font-size: 3vh;
+        margin: 0 0 2vh 0;
     }
 
-    .description {
-        font-weight: 300;
-        color: var(--soft-blue);
-        font-size: 18px;
+    .prices .price-ico {
+        flex-basis: 8%;
     }
 
-    /* Price */
-    .prices {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-basis: 80%;
-        padding-bottom: 15px;
-        border-bottom: 0.5px solid gray;
+    .prices .price-txt {
+        padding-top: 0;
+    }
+
+    .prices .time-ico {
+        flex-basis: 10%;
+    }
+}
+
+@media(min-width:768px) {
+    .wrapper {
+        height: 80vh;
+        width: 40vw;
+    }
+
+    .header-text {
+        margin: 2vh 0 2vh 0;
     }
 
     .prices .price-ico {
         flex-basis: 5%;
     }
 
-    .prices .price-txt {
-        color: var(--cyan);
-        font-size: 15px;
-        flex-grow: 1;
-        padding-left: 10px;
-        padding-top: 20px;
-    }
-
-
     .prices .time-ico {
         flex-basis: 8%;
     }
 
-    .prices .time-left {
-        color: var(--gray);
-        font-size: 15px;
-        padding-left: 5px;
-        padding-top: 20px;
+    .attribution {
+        font-size: 2vh;
     }
 
-    /* Footer */
-    .footer {
-        display: flex;
-        flex-basis: 80%;
-        align-items: center;
-        justify-items: center;
+}
+
+@media(min-width:880px) {
+    .equi-img {
+        flex-basis: 70%;
     }
 
     .footer .author-img {
-        flex-basis: 8%;
-        margin: 10px 0;
-        border: 1px solid var(--white);
-        border-radius: 50%;
-        flex-grow: 1;
-    }
-
-    .footer .author {
-        flex-basis: 70%;
-        flex-grow: 1;
-        margin-left: 20px;
-        font-size: 15px;
-        color: var(--white)
-    }
-
-    .author span {
-        color: var(--gray)
-    }
-
-    .attribution {
-        position: fixed;
-        bottom: 5vh;
-        left: 50%;
-        transform: translateX(-50%);
-        color: var(--white);
-        font-size: 10px;
-        width: 80%;
-        text-align: center;
+        flex-basis: 5%;
     }
 }
 
+@media(min-width: 990px) {
 
+    .wrapper {
+        width: 40vw;
+    }
+}
 
+@media(min-width: 1200px) {
+    .wrapper {
+        width: 25vw;
+    }
 
-/* TODO: zrobić reszte mq */
+    .equi-img {
+        flex-basis: 85%;
+        cursor: pointer;
+    }
+
+    .prices .price-txt {
+        padding-top: 0;
+    }
+
+    .header-text:hover {
+        color: var(--cyan);
+    }
+
+    .author span:hover {
+        color: var(--cyan)
+    }
+
+    .equi-img:hover .shadow-bg {
+        display: block;
+        background-color: var(--soft-cyan);
+    }
+}
+
+/* TODO: zrobić reszte mq:
+zacząć od min-width poźniej max-width*/
