@@ -12,5 +12,6 @@ Your users should be able to:
     View the optimal layout depending on their device's screen size
     See hover states for interactive elements
 "
+
 You can see my solution here: 
 https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-flexbox-eOGAvq75G
