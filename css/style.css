@@ -1,9 +1,6 @@
 :root {
-    /* main BG */
     --very-dark-blue: hsl(217, 54%, 11%);
-    /* card BG */
     --very-dark-blue2: hsl(216, 50%, 16%);
-    /* line */
     --very-dark-blue3: hsl(215, 32%, 27%);
     --white: hsl(0, 0%, 100%);
     --cyan: hsl(178, 100%, 50%);
@@ -21,7 +18,7 @@ body {
     position: relative;
     background-color: var(--very-dark-blue);
     font-family: 'Outfit', sans-serif;
-    height: 95vh;
+    height: 100vh;
 }
 
 .wrapper {
@@ -88,7 +85,6 @@ body {
     margin-bottom: 2vh;
 }
 
-/* Price */
 .prices {
     display: flex;
     justify-content: center;
@@ -120,7 +116,6 @@ body {
     padding-left: 5px;
 }
 
-/* Footer */
 .footer {
     display: flex;
     flex-basis: 80%;
