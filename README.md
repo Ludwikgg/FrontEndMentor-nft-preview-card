@@ -15,3 +15,6 @@ Your users should be able to:
 
 You can see my solution here: 
 https://www.frontendmentor.io/solutions/responsive-landing-page-using-css-flexbox-eOGAvq75G
+
+Live:
+https://ludwikgg.github.io/frontEndMentor-nft-preview-card/
